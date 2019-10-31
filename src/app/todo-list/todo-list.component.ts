@@ -25,7 +25,7 @@ export class TodoListComponent implements OnInit {
             .pipe(map(actions => {
                 return actions.map(a => {
                     //Get document data
-                    const data = a.payload.doc.data() as Task;
+                    const data = a.payload.doc.data() as Todo;
                     //Get document id
                     const id = a.payload.doc.id;
                     //Use spread operator to add the id to the document data
