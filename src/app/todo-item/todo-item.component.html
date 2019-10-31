@@ -1,0 +1,23 @@
+<tr>
+  <td>{{description}}</td>
+  <td>
+    <button [ngClass]="{ 'btn btn-danger': dueDate === 'urgent',
+                         'btn btn-light': dueDate !== 'urgent' }" (click)="updateDueDate('urgent')">
+      <i class="fa fa-remove">Urgent</i>
+    </button>
+    <td>
+    <button [ngClass]="{ 'btn btn-warning': dueDate === 'days',
+                         'btn btn-light': dueDate !== 'days' }" (click)="updateDueDate('days')">
+      <i class="fa fa-remove">Days</i>
+    </button>
+    <td>
+    <button [ngClass]="{ 'btn btn-success': dueDate === 'week', 
+                         'btn btn-light': dueDate !== 'week' }" (click)="updateDueDate('week')">
+      <i class="fa fa-edit">Week</i>
+    </button>
+    <td>
+    <button class="btn btn-outline-danger" (click)="deleteTodo(id)">
+      <i class="fa fa-edit">Delete</i>
+    </button>
+  </td>
+</tr>

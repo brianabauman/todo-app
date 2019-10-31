@@ -1,0 +1,16 @@
+<p>Add a todo:</p>
+<form [formGroup]="newTodoForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label>
+            Desecription:
+            <input type="text" formControlName="description">
+        </label>
+    </div>
+    <div>
+        <label>
+            Due Date (week, days, urgent):
+            <input type="text" formControlName="dueDate">
+        </label>
+    </div>
+    <button (click)="addTodo()">Add todo</button>
+</form>
